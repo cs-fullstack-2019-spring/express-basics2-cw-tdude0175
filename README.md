@@ -1,7 +1,8 @@
-# Express basics - Routing/Router and Error handling
+# Express basics - Routing/Router and Modules
 
 ### Create an Express web application. 
 
+# Exercise 1:
 NOTE: Each endpoint should return an HTML page with the image included in this repository centered at top of page, with an appropriate page title. Each page should also use a different background color (your choice). USE CSS for all styling.
  
 Use Express Router module to create the 2 route groups ```guest``` and ```member``` :
@@ -19,8 +20,17 @@ All endpoints that start with ```/member``` should support the following GET rou
 * ```/signin``` - Should return the HTML message ```Please sign in with your Member credentials``` 
 * ```/contact/9995559999/KYancy``` - Should return the HTML message ```Thanks KYancy! We will contact you shortly at 9999999999``` (NOTE: ```9999999999``` just an example phone number and your endpoint should work for any number passed in. ```KYancy``` also can be any name)
 
-### Extras:
+Create a module named ```payments.js``` that contains the following operations:
+* ```getBalance()``` which returns any number of your choosing
+* ```payBalance()``` which returns 0
 
+### Exercise 2:
+Add endpoints/routes to the ```/member``` route group that can receive POST requests at:
+* ```/member/chargebalance```
+* ```/member/paybalance```
+
+### Extras:
+* Modify Exercise 2 so that it starts with a balance of 0 and then keeps a running balance as you pass hit the endpoints AND pass in a value. Both endpoints should return the current balance.
 * Create a route with a pattern of ```/colorwheel/333/222/111``` each number is ether the red, green, or blue value of a color. Return an HTML response with the same background RGB color as was passed in. 
 
 
